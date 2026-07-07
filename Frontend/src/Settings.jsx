@@ -1,6 +1,7 @@
 import "./Settings.css";
 import { useContext, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
+import { API_BASE_URL } from "./config.js";
 
 function Settings() {
     const { user, token, updateUser, handleLogout, theme, toggleTheme, setCurrentPage, showToast } = useContext(MyContext);
@@ -16,7 +17,7 @@ function Settings() {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/username", {
+            const response = await fetch(`${API_BASE_URL}/api/auth/username`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -45,7 +46,7 @@ function Settings() {
         if (!confirmDelete) return;
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/delete", {
+            const response = await fetch(`${API_BASE_URL}/api/auth/delete`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}`

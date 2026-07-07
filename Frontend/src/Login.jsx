@@ -1,6 +1,7 @@
 import "./Login.css";
 import { useState, useContext } from "react";
 import { MyContext } from "./MyContext.jsx";
+import { API_BASE_URL } from "./config.js";
 
 function Login({ onLogin, onCancel, initialIsSignup = false }) {
     const { showToast } = useContext(MyContext);
@@ -21,8 +22,8 @@ function Login({ onLogin, onCancel, initialIsSignup = false }) {
         setLoading(true);
 
         const url = isSignup
-            ? "http://localhost:8080/api/auth/signup"
-            : "http://localhost:8080/api/auth/login";
+            ? `${API_BASE_URL}/api/auth/signup`
+            : `${API_BASE_URL}/api/auth/login`;
 
         const body = isSignup
             ? { username, email, password }

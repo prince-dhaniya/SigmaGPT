@@ -1,6 +1,7 @@
 import "./UpgradePlan.css";
 import { useContext } from "react";
 import { MyContext } from "./MyContext.jsx";
+import { API_BASE_URL } from "./config.js";
 
 function UpgradePlan() {
     const { user, token, updateUser, setCurrentPage, showToast } = useContext(MyContext);
@@ -14,7 +15,7 @@ function UpgradePlan() {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/plan", {
+            const response = await fetch(`${API_BASE_URL}/api/auth/plan`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
