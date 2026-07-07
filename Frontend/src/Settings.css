@@ -1,0 +1,156 @@
+/* Settings Page */
+
+.settings-page {
+    height: 100vh;
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.settings-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.settings-back-btn {
+    padding: 6px 12px;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-input);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+.settings-back-btn:hover {
+    background: var(--border-input);
+}
+
+.settings-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.settings-card {
+    background: var(--bg-input);
+    border: 1px solid var(--border-input);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.settings-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.settings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border-input);
+}
+
+.settings-row:last-child {
+    border-bottom: none;
+}
+
+.settings-value {
+    color: var(--text-muted);
+}
+
+.settings-theme-btn {
+    padding: 6px 12px;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-input);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.settings-theme-btn:hover {
+    background: var(--border-input);
+}
+
+/* Edit Username Inline elements */
+.settings-value-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-btn-edit {
+    padding: 3px 8px;
+    background: none;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    color: var(--text-main);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.settings-btn-edit:hover {
+    background: var(--bg-hover);
+}
+
+.settings-edit-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.settings-edit-input {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-input);
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-size: 13px;
+    outline: none;
+}
+
+.settings-btn-save {
+    padding: 4px 8px;
+    background: #22c55e;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.settings-btn-cancel {
+    padding: 4px 8px;
+    background: none;
+    border: 1px solid var(--border-input);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.settings-delete-btn {
+    padding: 6px 12px;
+    background: #ef4444;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.settings-delete-btn:hover {
+    background: #dc2626;
+}

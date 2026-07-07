@@ -1,0 +1,114 @@
+/* Upgrade Plan Page */
+
+.upgrade-page {
+    height: 100vh;
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.upgrade-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.upgrade-back-btn {
+    padding: 6px 12px;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-input);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+.upgrade-back-btn:hover {
+    background: var(--border-input);
+}
+
+.upgrade-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.upgrade-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.upgrade-card {
+    background: var(--bg-input);
+    border: 1px solid var(--border-input);
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.upgrade-card-active {
+    border-color: #22c55e;
+}
+
+.upgrade-card-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.upgrade-card-price {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.upgrade-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.upgrade-features li {
+    font-size: 13px;
+    padding: 5px 0;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-input);
+}
+
+.upgrade-features li:last-child {
+    border-bottom: none;
+}
+
+.upgrade-card-btn {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-input);
+    background: var(--bg-hover);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.upgrade-card-btn:hover:not(:disabled) {
+    background: var(--border-input);
+}
+
+.upgrade-card-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+    .upgrade-cards {
+        grid-template-columns: 1fr;
+    }
+}

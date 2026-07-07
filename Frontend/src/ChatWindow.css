@@ -1,0 +1,227 @@
+/* Chat Window with Theme Support */
+
+.chatWindow {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  height: 48px;
+  min-height: 48px;
+}
+
+.navbar span {
+  margin: 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar span i {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.userIconDiv {
+  margin: 0 16px;
+  cursor: pointer;
+}
+
+.userIcon {
+  background-color: var(--bg-hover);
+  border: 1px solid var(--border-input);
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-auth-buttons {
+  display: flex;
+  gap: 8px;
+  margin: 0 16px;
+}
+
+.nav-login-btn, .nav-signup-btn {
+  padding: 8px 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+
+.nav-login-btn {
+  background: #0f0f0f;
+  border: 1px solid #0f0f0f;
+  color: #ffffff;
+}
+
+.nav-login-btn:hover {
+  opacity: 0.9;
+}
+
+.nav-signup-btn {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #0f0f0f;
+}
+
+.nav-signup-btn:hover {
+  background: #f7f7f7;
+}
+
+.userIcon i {
+  color: var(--text-main) !important;
+  font-size: 12px;
+}
+
+/* Loader - centered */
+.loaderWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* Chat Input */
+.chatInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px 16px;
+}
+
+.inputBox {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputBox input {
+  width: 100%;
+  border: 1px solid var(--border-input);
+  background-color: var(--bg-input);
+  padding: 14px 50px 14px 18px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-input);
+  border-radius: 24px;
+  outline: none;
+  transition: border-color 0.15s, background-color 0.2s ease, color 0.2s ease;
+}
+
+.inputBox input::placeholder {
+  color: var(--placeholder-input);
+}
+
+.inputBox input:focus {
+  border-color: var(--text-muted);
+}
+
+#submit {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--bg-submit);
+  transition: opacity 0.15s, background-color 0.2s ease;
+}
+
+#submit i {
+  color: var(--color-submit-icon) !important;
+  font-size: 13px;
+}
+
+#submit:hover {
+  opacity: 0.85;
+}
+
+.info {
+  font-size: 11px;
+  padding: 8px 0 0;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+/* Dropdown */
+.dropDown {
+  position: absolute;
+  top: 48px;
+  right: 16px;
+  width: 180px;
+  background: var(--bg-dropdown);
+  border: 1px solid var(--border-dropdown);
+  padding: 4px;
+  border-radius: 10px;
+  text-align: left;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.dropDownItems {
+  font-size: 13px;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: var(--text-dropdown);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.dropDownItems i {
+  font-size: 13px;
+  width: 18px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.dropDownItems:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-main);
+}
+
+.dropDownItems:hover i {
+  color: var(--text-main);
+}
+
+/* New Chat Heading */
+.chatWindow h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 25vh;
+  text-align: center;
+  transition: color 0.2s ease;
+}
